@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: n4eogtf5w-python
+  janus-idp.io/tekton: n4eogtf5w-python
+  backstage.io/kubernetes-id: n4eogtf5w-python
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: n4eogtf5w-python
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
